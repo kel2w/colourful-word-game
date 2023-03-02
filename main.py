@@ -75,7 +75,7 @@ score.place(x=0, y=0)
 clock = tkinter.Label(window, text='Time remaining: ' + str(time_remaining))
 clock.place(x=375, y=0)
 
-instructions = tkinter.Label(window, text='Type the colour of the word shown on the screen in all lowercase\n letters to score points for each correct answer. Enjoy :)')
+instructions = tkinter.Label(window, text='Type the colour of the word in all lowercase letters to score\n points, and press enter to submit your answer. Enjoy :)')
 instructions.place(x=250, y=50, anchor='center')
 
 word = tkinter.Label(window, font = ('Cambria', 60))
@@ -86,7 +86,7 @@ answerbox.place(x=250, y=300, anchor='center')
 startButton = tkinter.Button(window, text='Start', command=click)
 startButton.place(x=250, y=250, anchor='center')
 
-window.bind('<Return>', startGame) 
+window.bind('<Return>', startGame)
 answerbox.focus_set()
 
 window.mainloop()
