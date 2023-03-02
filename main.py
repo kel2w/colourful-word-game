@@ -18,6 +18,7 @@ end = tkinter.Label(window, text='Game over', font = ('Cambria', 60))
 
 def click():
     smileyfaceLabel.place_forget()
+    word.place(x=250, y=150, anchor='center')
     next()
     startGame()
 
@@ -78,8 +79,7 @@ clock.place(x=375, y=0)
 instructions = tkinter.Label(window, text='Type the colour of the word shown on the screen in all lowercase\n letters to score points for each correct answer. Enjoy :)')
 instructions.place(x=250, y=50, anchor='center')
 
-word = tkinter.Label(window, font = ('Cambria', 60)) 
-word.place(x=250, y=150, anchor='center')
+word = tkinter.Label(window, font = ('Cambria', 60))
 
 answerbox = tkinter.Entry(window, width=40)
 answerbox.place(x=250, y=300, anchor='center')
