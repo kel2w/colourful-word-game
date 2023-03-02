@@ -16,18 +16,18 @@ max_time = 30
 time_remaining = max_time
 end = tkinter.Label(window, text='Game over', font = ('Cambria', 60))
 
-def click():
+def click() -> None:
     smileyfaceLabel.place_forget()
     word.place(x=250, y=150, anchor='center')
     next()
     startGame()
 
-def startGame(event):
+def startGame(event) -> None:
     if time_remaining == max_time:
         countdown()
     next()
 
-def countdown():
+def countdown() -> None:
     global time_remaining
     global end
     if time_remaining > 0:
@@ -44,7 +44,7 @@ def countdown():
         restartButton = tkinter.Button(window, text='Play again', command=restartGame)
         restartButton.place(x=250, y=250, anchor='center')
 
-def next():
+def next() -> None:
     global player_score 
     global time_remaining
     global colours
@@ -57,14 +57,13 @@ def next():
         word.config(fg=str(colours[1]), text=str(colours[0]))
         score.config(text='Score: ' + str(player_score)) 
 
-def restartGame():
+def restartGame() -> None:
     global time_remaining
     global player_score
+    global word
     time_remaining = max_time
     player_score = 0
     end.place_forget()
-
-    global word
     word = tkinter.Label(window, font=('Cambria', 60))
     word.place(x=250, y=150, anchor='center')
 
